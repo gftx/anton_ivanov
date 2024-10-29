@@ -1,0 +1,27 @@
+.layout {
+  margin: 20px;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-logo {
+      cursor: pointer;
+      width: 120px;
+    }
+
+    &-routing {
+      display: flex;
+      gap: 30px;
+
+      &-link {
+        border-bottom: 1px solid inherit;
+
+        &__active {
+          border-bottom: 1px solid #000000;
+        }
+      }
+    }
+  }
+}

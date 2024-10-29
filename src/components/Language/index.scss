@@ -1,0 +1,15 @@
+.languages {
+  align-self: flex-start;
+  width: 120px;
+
+  &-btn {
+    cursor: pointer;
+    padding: 0;
+    margin: 0 10px;
+    border-bottom: 1px solid inherit;
+
+    &__active {
+      border-bottom: 1px solid #000000;
+    }
+  }
+}
