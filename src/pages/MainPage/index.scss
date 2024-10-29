@@ -7,8 +7,14 @@
   }
 
   &-title {
-    font-size: 180px;
-    margin: 20px;
+    &-heading {
+      font-size: 180px;
+      margin: 20px;
+    }
+    &-subheading {
+      margin: 20px;
+      width: 300px;
+    }
   }
 
   &-laptop {

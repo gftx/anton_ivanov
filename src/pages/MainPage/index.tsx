@@ -2,15 +2,18 @@ import classNames from "classnames";
 import plus from "../../assets/icons/white-plus.svg";
 import laptop from "../../assets/images/laptop.png";
 import "./index.scss";
+import { useTranslation } from "react-i18next";
 
 function Main() {
+  const { t } = useTranslation();
   return (
     <div className='main'>
       <div className='main-container'>
-        <div>
-          <h2 className='main-title'>
+        <div className='main-title'>
+          <h2 className='main-title-heading'>
             Anton <br /> Ivanov
           </h2>
+          <p className='main-title-subheading'>{t("mainSubheading")}</p>
         </div>
         <div className='main-laptop'>
           <div className='grid-wrapper'>
