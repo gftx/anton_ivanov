@@ -38,6 +38,75 @@
       position: absolute;
       inset: auto -12px -12px auto;
     }
+
+    &__addText {
+      opacity: 0.5;
+      color: #fff;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-family: Gilroy, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%;
+      text-decoration: none;
+      position: absolute;
+
+      &-1 {
+        top: 19px;
+        left: 23px;
+      }
+
+      &-2 {
+        bottom: 16px;
+        left: 23px;
+      }
+
+      &-3 {
+        bottom: 12px;
+        right: 25px;
+        color: red;
+      }
+    }
+
+    &__image {
+      z-index: 1;
+      aspect-ratio: 422 / 403;
+      object-fit: contain;
+      width: 422px;
+      position: relative;
+    }
+
+    &-runningString {
+      &__string {
+        color: #ffffff;
+        text-align: left;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        flex: none;
+        margin-top: -28px;
+        margin-bottom: 0;
+        font-family: Gilroy, sans-serif;
+        font-size: 175px;
+        font-weight: 800;
+        line-height: 73%;
+        text-decoration: none;
+        padding-right: 200px;
+      }
+
+      &-viewport {
+        height: auto;
+        display: flex;
+        position: absolute;
+        top: 125px;
+        left: 0;
+      }
+
+      &-animation-liner {
+        animation: text-moving 12s linear infinite;
+      }
+    }
   }
 
   .grid {
@@ -87,47 +156,13 @@
     position: relative;
     overflow: hidden;
   }
-  .laptop-image {
-    z-index: 1;
-    aspect-ratio: 422 / 403;
-    object-fit: contain;
-    width: 422px;
-    position: relative;
-  }
-  .text-animation-liner {
-    animation: text-moving 12s linear infinite;
-  }
-  .text-viewport-cs {
-    height: auto;
-    display: flex;
-    position: absolute;
-    top: 125px;
-    left: 0;
-  }
+}
 
-  @keyframes text-moving {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-66.66667%);
-    }
+@keyframes text-moving {
+  0% {
+    transform: translateX(0);
   }
-
-  .title-text {
-    color: #fff;
-    text-align: left;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    white-space: nowrap;
-    flex: none;
-    margin-top: -28px;
-    margin-bottom: 0;
-    font-family: Gilroy, sans-serif;
-    font-size: 175px;
-    font-weight: 800;
-    line-height: 73%;
-    text-decoration: none;
-    padding-right: 200px;
+  100% {
+    transform: translateX(-66.66667%);
   }
 }

@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import plus from "../../assets/icons/white-plus.svg";
 import laptop from "../../assets/images/laptop.png";
 import "./index.scss";
@@ -33,24 +34,52 @@ function Main() {
             <img className='main-laptop-plus__icon2' src={plus} />
             <img className='main-laptop-plus__icon3' src={plus} />
             <img className='main-laptop-plus__icon4' src={plus} />
+
             <div className='grod-wrapper-inner'>
               <div
-                className='text-viewport-cs text-animation-liner'
-                style={{ animationDuration: "10.5262s" }}
+                className={classNames(
+                  "main-laptop-runningString-viewport",
+                  "main-laptop-runningString-animation-liner",
+                )}
+                style={{ animationDuration: "11.9475s" }}
               >
-                <div className='title-text small gs text-animation-item'>
+                <div className='main-laptop-runningString__string'>
                   SOFTWARE ENGINEER
                 </div>
-                <div className='title-text small gs text-animation-item'>
+                <div className='main-laptop-runningString__string'>
                   CONTENT CREATOR
                 </div>
-                <div className='title-text small gs text-animation-item'>
+                <div className='main-laptop-runningString__string'>
                   SOFTWARE ENGINEER
                 </div>
               </div>
+              <div
+                className={classNames(
+                  "main-laptop__addText",
+                  "main-laptop__addText-1",
+                )}
+              >
+                react
+              </div>
+              <div
+                className={classNames(
+                  "main-laptop__addText",
+                  "main-laptop__addText-2",
+                )}
+              >
+                typeScript
+              </div>
+              <div
+                className={classNames(
+                  "main-laptop__addText",
+                  "main-laptop__addText-3",
+                )}
+              >
+                web3
+              </div>
               <img
                 src={laptop}
-                className="laptop-image"
+                className='main-laptop__image'
                 sizes='(max-width: 479px) 67vw, (max-width: 767px) 72vw, (max-width: 991px) 74vw, 422px'
               />
             </div>
