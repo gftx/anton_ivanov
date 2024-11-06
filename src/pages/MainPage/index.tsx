@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { Contacts, Experience, Laptop } from "./components";
+import {useEffect, useState} from "react";
+import {Contacts, Experience, Laptop} from "./components";
 
 import "./index.scss";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import classNames from "classnames";
-import { useLocation, useNavigate } from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 interface Page {
   id: string;
@@ -13,9 +13,9 @@ interface Page {
 }
 
 function Main() {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
   const navigate = useNavigate();
-  const { search } = useLocation();
+  const {search} = useLocation();
 
   const setQuery = (param: string, value: string) => {
     const searchParams = new URLSearchParams(window.location.search);
@@ -28,13 +28,13 @@ function Main() {
   const filter = queryParams.get("subpage");
 
   const pages = [
-    { id: "base", navTitle: "", component: <Laptop /> },
+    {id: "base", navTitle: "", component: <Laptop/>},
     {
       id: "experience",
       navTitle: t("experienceTitle"),
-      component: <Experience />,
+      component: <Experience/>,
     },
-    { id: "contacts", navTitle: t("contactsTitle"), component: <Contacts /> },
+    {id: "contacts", navTitle: t("contactsTitle"), component: <Contacts/>},
   ];
 
   const [currentPage, setCurrentPage] = useState<Page>(() => {
@@ -50,6 +50,12 @@ function Main() {
     }
   });
 
+  useEffect(() => {
+    if (!filter && currentPage.id !== pages[0].id) {
+      setCurrentPage(pages[0])
+    }
+  }, [filter])
+
   const navigateTo = (page: Page) => {
     setCurrentPage(page);
 
@@ -60,9 +66,9 @@ function Main() {
     <div className='main'>
       <div className='main-container'>
         <div className='main-title'>
-          <button onClick={() => navigateTo(pages[0])}>
+          <button className='main-title-btn' onClick={() => navigateTo(pages[0])}>
             <h2 className='main-title-heading'>
-              Anton <br /> Ivanov
+              Anton <br/> Ivanov
             </h2>
           </button>
 
@@ -91,4 +97,4 @@ function Main() {
   );
 }
 
-export { Main };
+export {Main};

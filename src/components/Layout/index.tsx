@@ -1,12 +1,12 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
-import { LanguageSelecor } from "../Language";
+import {Link, Outlet, useLocation} from "react-router-dom";
+import {LanguageSelecor} from "../Language";
 import classNames from "classnames";
-import { ROUTS } from "../../const";
+import {ROUTS} from "../../const";
 
 import "./index.scss";
 
 function Layout() {
-  const { pathname } = useLocation();
+  const {pathname} = useLocation();
 
   return (
     <div className='layout'>
@@ -34,11 +34,11 @@ function Layout() {
           </Link>
         </div>
 
-        <LanguageSelecor />
+        <LanguageSelecor/>
       </div>
-      <Outlet />
+      <Outlet/>
     </div>
   );
 }
 
-export { Layout };
+export {Layout};

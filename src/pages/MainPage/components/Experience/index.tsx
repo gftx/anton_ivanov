@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 import "./index.scss";
 
 interface Experience {
@@ -10,7 +10,7 @@ interface Experience {
 }
 
 const Experience = () => {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
   const experienceList = t("experienceList", {
     returnObjects: true,
   }) as Experience[];
@@ -20,25 +20,48 @@ const Experience = () => {
       <div className='experience-list'>
         {experienceList.map((i) => (
           <div key={i.title} className='experience-list-item'>
-            <p className='experience-list-item-data'>{i.data}</p>
-            <a
-              href={i.link}
-              target='_blank'
-              className='experience-list-item-title'
-            >
-              {i.title}
-            </a>
+            <div className="experience-list-item-container">
+              <p className='experience-list-item-data'>{i.data},</p>
+              <a
+                href={i.link}
+                target='_blank'
+                className='experience-list-item-title'
+              >
+                {i.title}
+              </a>
+            </div>
             <div className='experience-list-item-bullets'>
               {i.bullets.map((bullet: string) => (
-                <p key={bullet}>{bullet}</p>
+                <div
+                  key={bullet}
+                  className='experience-list-item-bullets-bullet'>
+                  <p>{bullet}</p>
+                  <span>&#8226;</span>
+                </div>
               ))}
             </div>
-            <p className='experience-list-item-skills'>{i.skills}</p>
           </div>
         ))}
+      </div>
+      <div className='experience-skills'>
+        <h3>
+          Skills:
+        </h3>
+        <p>
+          <strong>Frontend:</strong>
+          <br/>
+          ReactJS, JavaScript and TypeScript with the latest ECMAScript standards,
+          Redux, MobX, styled-components, Jest, Testing Library, react-router-dom,
+          GraphQL
+        </p>
+        <p>
+          <strong>Other:</strong>
+          <br/>
+          NestJS, NodeJS, PostgreSQL, CI/CD, Nginx, Webpack, Git, npm, yarn
+        </p>
       </div>
     </div>
   );
 };
 
-export { Experience };
+export {Experience};
