@@ -59,6 +59,7 @@
     text-align: right;
 
     width: 35vw;
+
     p {
       opacity: 0.6;
     }
@@ -69,6 +70,27 @@
 
     &-skills {
       width: 55vw;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 90vw;
+
+    &-skills {
+      width: 75vw;
+    }
+
+    &-list {
+      &-item {
+
+        &-data {
+          font-size: 14px;
+          margin: 0;
+        }
+        &-title {
+          font-size: 20px;
+        }
+      }
     }
   }
 }

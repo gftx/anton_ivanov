@@ -1,6 +1,6 @@
 .main {
   &-laptop {
-    width: 30vw;
+    width: 40vw;
     margin-right: 50px;
 
     &-plus__icon1 {
@@ -152,5 +152,39 @@
   }
   100% {
     transform: translateX(-66.66667%);
+  }
+}
+
+@media (max-width: 1070px) {
+  .main {
+    &-laptop {
+      width: 60vw;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    &-laptop {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+  }
+}
+
+
+@media (max-width: 650px) {
+  .main {
+    &-laptop {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+    }
+
+    .grid-wrapper {
+      max-width: 90vw;
+    }
   }
 }

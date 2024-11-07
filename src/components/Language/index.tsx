@@ -7,10 +7,18 @@ const languages = [
   { code: "en", lang: "Eng" },
 ];
 
-const LanguageSelecor = () => {
+interface Props {
+  onClick?: () => void
+}
+
+const LanguageSelector = (props: Props) => {
+  const { onClick } = props
   const { i18n } = useTranslation();
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
+    if (onClick) {
+      onClick()
+    }
   };
 
   return (
@@ -30,4 +38,4 @@ const LanguageSelecor = () => {
   );
 };
 
-export { LanguageSelecor };
+export { LanguageSelector };
