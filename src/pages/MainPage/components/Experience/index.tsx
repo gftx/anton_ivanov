@@ -1,4 +1,4 @@
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import "./index.scss";
 
 interface Experience {
@@ -10,7 +10,7 @@ interface Experience {
 }
 
 const Experience = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const experienceList = t("experienceList", {
     returnObjects: true,
   }) as Experience[];
@@ -64,4 +64,4 @@ const Experience = () => {
   );
 };
 
-export {Experience};
+export { Experience };

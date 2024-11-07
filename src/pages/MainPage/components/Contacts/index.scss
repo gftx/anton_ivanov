@@ -1,7 +1,21 @@
 .contacts {
   margin: 20px;
-  &-title {
-  }
+  width: 100%;
+
   &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+    margin: 20px;
+
+    &-item {
+      text-align: right;
+
+      &:hover {
+        opacity: 0.7;
+        transition-duration: 1s;
+      }
+    }
   }
 }

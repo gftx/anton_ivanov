@@ -1,12 +1,21 @@
-import { useTranslation } from "react-i18next"
 import "./index.scss"
+import { CONTACTS } from "../../../../const.ts";
 
 const Contacts = () => {
-  const { t } = useTranslation()
   return (
     <div className="contacts">
-      <h3 className="contacts-title">{t("contactsHeader")}</h3>
-      <div className="contacts-list"></div>
+      <div className="contacts-list">
+        {CONTACTS.map(contact => (
+          <a
+            className="contacts-list-item"
+            key={contact.url}
+            href={contact.url}
+            target="_blank"
+          >
+            {contact.title}
+          </a>
+        ))}
+      </div>
     </div>
   )
 }

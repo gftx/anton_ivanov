@@ -105,10 +105,12 @@
       height: 500px;
       position: relative;
     }
+
     &-rcs {
       position: absolute;
       inset: 0%;
     }
+
     &-rows {
       flex-flow: column;
       justify-content: space-between;
@@ -116,11 +118,13 @@
       display: flex;
       position: absolute;
       inset: 0%;
+
       &-line {
         border-top: 1px solid #4c4c4c;
         width: 100%;
       }
     }
+
     &-columns {
       flex-flow: row;
       justify-content: space-between;
@@ -128,6 +132,7 @@
       display: flex;
       position: absolute;
       inset: 0%;
+
       &-line {
         border-left: 1px solid #4c4c4c;
         width: 0%;
@@ -135,6 +140,7 @@
       }
     }
   }
+
   .grod-wrapper-inner {
     justify-content: center;
     align-items: center;
