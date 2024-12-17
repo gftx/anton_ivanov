@@ -21,7 +21,6 @@ const Experience = () => {
         {experienceList.map((i) => (
           <div key={i.title} className='experience-list-item'>
             <div className="experience-list-item-container">
-              <p className='experience-list-item-data'>{i.data},</p>
               <a
                 href={i.link}
                 target='_blank'
