@@ -1,3 +1,28 @@
 .mentoring {
   margin: 120px 20px;
+  &-heading {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-roadmap {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    strong {
+      text-decoration: underline;
+    }
+  }
+  &-reviews {
+    margin-top: 20px;
+  }
+
+  &-cards {
+    display: flex;
+    gap: 20px;
+
+    justify-content: center;
+    margin-bottom: 40px;
+  }
 }
