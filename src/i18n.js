@@ -16,14 +16,15 @@ i18next.use(initReactI18next).init({
 
         experienceList: [
           {
-            title: "Raiffeisen Bank",
-            data: "01.2024 - present",
+            title: "FIT Heroes",
+            data: "01.2024 - 11.2024",
             bullets: [
-              "developed microfrontend system based on webpack module federation, which improved the scalability of the project and also allowed the team to work independently of each other",
-              "I created mockups in figma myself to improve UX and meet the customer's needs with their subsequent implementation on the frontend",
-              "add unit tests on Jest and Testing Library to the project with almost full coverage of most important components"
+              "Разработка децентрализованного приложения (dApp): Создавал интерактивные интерфейсы для Web3-платформы с использованием Next.js, TypeScript",
+              "Интеграция с блокчейном: Настраивал взаимодействие с Ethereum через Web3.js. Обеспечивал безопасное подключение кошельков (MetaMask)",
+              "Реализация пользовательских интерфейсов: Разрабатывал адаптивные и отзывчивые дизайны с использованием Styled Components и Material-UI. Оптимизировал производительность интерфейса для быстрой загрузки и плавной работы",
+              "Интеграция смарт-контрактов: Подключал смарт-контракты к интерфейсу приложения, реализовывал функции чтения данных из блокчейна и отправки транзакций.",
             ],
-            link: "https://www.raiffeisen.ru/",
+            link: "",
           },
           {
             title: "Garpix",
@@ -60,14 +61,15 @@ i18next.use(initReactI18next).init({
 
         experienceList: [
           {
-            title: "Raiffeisen Bank",
-            data: "01.2024 - present",
+            title: "FIT Heroes",
+            data: "01.2024 - 11.2024",
             bullets: [
-              "developed microfrontend system based on webpack module federation, which improved the scalability of the project and also allowed the team to work independently of each other",
-              "I created mockups in figma myself to improve UX and meet the customer's needs with their subsequent implementation on the frontend",
-              "add unit tests on Jest and Testing Library to the project with almost full coverage of most important components"
+              "Developed decentralized application (dApp): Built interactive interfaces for Web3 platform using React, TypeScript",
+              "Blockchain integration: Configured interactions with Ethereum through Web3.js. Enabled secure wallet connections (MetaMask).",
+              "Implemented user interfaces: Created responsive and adaptive designs using Styled Components and Material-UI. Optimized UI performance for fast loading and seamless interaction.",
+              "Smart contract integration: Connected smart contracts to the application interface, implemented functions for reading blockchain data and sending transactions.",
             ],
-            link: "https://www.raiffeisen.ru/",
+            link: "",
           },
           {
             title: "Garpix",

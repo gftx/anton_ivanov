@@ -20,7 +20,7 @@ const Experience = () => {
       <div className='experience-list'>
         {experienceList.map((i) => (
           <div key={i.title} className='experience-list-item'>
-            <div className="experience-list-item-container">
+            <div className='experience-list-item-container'>
               <a
                 href={i.link}
                 target='_blank'
@@ -33,7 +33,8 @@ const Experience = () => {
               {i.bullets.map((bullet: string) => (
                 <div
                   key={bullet}
-                  className='experience-list-item-bullets-bullet'>
+                  className='experience-list-item-bullets-bullet'
+                >
                   <p>{bullet}</p>
                   <span>&#8226;</span>
                 </div>
@@ -43,20 +44,20 @@ const Experience = () => {
         ))}
       </div>
       <div className='experience-skills'>
-        <h3>
-          Skills:
-        </h3>
+        <h3>Skills:</h3>
         <p>
           <strong>Frontend:</strong>
-          <br/>
-          ReactJS, JavaScript and TypeScript with the latest ECMAScript standards,
-          Redux, MobX, styled-components, Jest, Testing Library, react-router-dom,
-          GraphQL
+          <br />
+          ReactJS, JavaScript and TypeScript with the latest ECMAScript
+          standards, HTML, CSS, Redux, MobX, Next.js, SCSS, styled-components,
+          Jest, Testing Library, react-router-dom, Axios, GraphQL , Web3.JS,
+          Ether.JS, FSD pattern, Telegram web app
         </p>
         <p>
           <strong>Other:</strong>
-          <br/>
-          NestJS, NodeJS, PostgreSQL, CI/CD, Nginx, Webpack, Git, npm, yarn
+          <br />
+          NestJS, Solidity, NodeJS, PostgreSQL, CI/CD, Nginx, Webpack, Git, npm, pnpm, 
+          yarn
         </p>
       </div>
     </div>
